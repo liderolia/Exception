@@ -1,6 +1,6 @@
 package Exception.homework.hw_03;
 
-public class DataCheck {
+public class CheckList {
 
     private String Name;
     private String Surname;
@@ -10,7 +10,7 @@ public class DataCheck {
     private char Gender;
     private boolean CorrectData = true;
 
-    public DataCheck(String enterString) {
+    public CheckList(String enterString) {
         String[] enterStrings = enterString.split(" ");
         if (ProcessErrorCode(enterStrings)) {
             try {

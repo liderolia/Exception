@@ -10,10 +10,10 @@ public class Main {
         String mydata = "";
         try (Scanner scanner = new Scanner(System.in, "cp866");) {            
             System.out.println("Введите свои данные через пробел "+
-                                "(ФИО, дата рождения (dd.mm.yyyy), телефон, пол: m/f): ");
+                                "(ФИО, дата рождения в формате dd.mm.yyyy, телефон, пол: m или f): ");
             mydata = scanner.nextLine();
         }
-        DataCheck ch = new DataCheck(mydata);
+        CheckList ch = new CheckList(mydata);
         if (ch.getCorrect()) {
             File file = new File(ch.getSurname());
             try (FileWriter writer = new FileWriter(file, true);) {
